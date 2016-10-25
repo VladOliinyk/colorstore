@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello there!</title>
+    <script type="text/javascript" src="./src/Lib.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
+
+
+</head>
+<body>
+<section id="header">
+    <div id="header-title"><span class="text-white">color</span><span class="text-red">S</span><span class="text-white">tore</span><span
+            class="beta"><sup>beta 2.0</sup></span>
+    </div>
+</section>
+<section id="main">
+    <div class="picker" id="primary_block">
+        <div id="line">
+            <div id="arrows">
+                <div class="left_arrow"></div>
+                <div class="right_arrow"></div>
+            </div>
+        </div>
+
+        <div id="block_picker">
+            <img src="./img/bg-gradient.png" class="bk_img">
+            <div class="circle" id="circle"></div>
+        </div>
+
+        <div id="out_color" class="out_color"></div>
+        <div id="block-qwe">
+            <div id="range">
+                <span> Strength: </span>
+                <input type="range" min="-50" max="50" step="0.5" value="0" onchange="setRange(parseInt(this.value))">
+            </div>
+        </div>
+
+        <div class="color_scheme_1">
+            <div id="cs11">
+                <span class="cs11text">RGB</span> <input max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs11-rgb-r" type="text"
+                                                         placeholder="R" value=""
+                                                         onchange="changeColorView(this)"/><input max="255" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs11-rgb-g"
+                                                                                                  type="text"
+                                                                                                  placeholder="G"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs11-rgb-b" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs11text">HSB</span> <input max="360" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs11-hsv-h" type="text"
+                                                         placeholder="H" value=""
+                                                         onchange="changeColorView(this)"/><input max="100" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs11-hsv-s"
+                                                                                                  type="text"
+                                                                                                  placeholder="S"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="100" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs11-hsv-v" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs11text">HEX</span> <input readonly class="cl-x1 cs11 colorLabelsImput" id="cs11-hex"
+                                                         type="text"
+                                                         placeholder="#hex" value=""
+                                                         onchange="changeColorView(this, 1)"/>
+            </div>
+
+            <div id="cs12">
+                <span class="cs12text">RGB</span> <input max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs12-rgb-r" type="text"
+                                                         placeholder="R" value=""
+                                                         onchange="changeColorView(this)"/><input max="255" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs12-rgb-g"
+                                                                                                  type="text"
+                                                                                                  placeholder="G"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs12-rgb-b" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs12text">HSB</span> <input max="360" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs12-hsv-h" type="text"
+                                                         placeholder="H" value=""
+                                                         onchange="changeColorView(this)"/><input max="100" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs12-hsv-s"
+                                                                                                  type="text"
+                                                                                                  placeholder="S"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="100" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs12-hsv-v" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs12text">HEX</span> <input readonly class="cl-x1 cs11 colorLabelsImput" id="cs12-hex"
+                                                         type="text"
+                                                         placeholder="#hex" value=""
+                                                         onchange="changeColorView(this, 1)"/>
+            </div>
+
+            <div id="cs13">
+                <span class="cs13text">RGB</span> <input max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs13-rgb-r" type="text"
+                                                         placeholder="R" value=""
+                                                         onchange="changeColorView(this)"/><input max="255" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs13-rgb-g"
+                                                                                                  type="text"
+                                                                                                  placeholder="G"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs13-rgb-b" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs13text">HSB</span> <input max="360" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs13-hsv-h" type="text"
+                                                         placeholder="H" value=""
+                                                         onchange="changeColorView(this)"/><input max="100" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs13-hsv-s"
+                                                                                                  type="text"
+                                                                                                  placeholder="S"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="100" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs13-hsv-v" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs13text">HEX</span> <input readonly class="cl-x1 cs11 colorLabelsImput" id="cs13-hex"
+                                                         type="text"
+                                                         placeholder="#hex" value=""
+                                                         onchange="changeColorView(this, 1)"/>
+            </div>
+
+            <div id="cs14">
+                <span class="cs14text">RGB</span> <input max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs14-rgb-r" type="text"
+                                                         placeholder="R" value=""
+                                                         onchange="changeColorView(this)"/><input max="255" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs14-rgb-g"
+                                                                                                  type="text"
+                                                                                                  placeholder="G"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="255" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs14-rgb-b" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs14text">HSB</span> <input max="360" min="0" readonly class="cl-x3 cs11 colorLabelsImput"
+                                                         id="cs14-hsv-h" type="text"
+                                                         placeholder="H" value=""
+                                                         onchange="changeColorView(this)"/><input max="100" min="0"
+                                                                                                  readonly
+                                                                                                  class="cl-x3 cs11 colorLabelsImput"
+                                                                                                  id="cs14-hsv-s"
+                                                                                                  type="text"
+                                                                                                  placeholder="S"
+                                                                                                  value=""
+                                                                                                  onchange="changeColorView(this)"/><input
+                    max="100" min="0" readonly class="cl-x3 cs11 colorLabelsImput" id="cs14-hsv-v" type="text"
+                    placeholder="B" value=""
+                    onchange="changeColorView(this)"/>
+                <span class="cs14text">HEX</span> <input readonly class="cl-x1 cs11 colorLabelsImput" id="cs14-hex"
+                                                         type="text"
+                                                         placeholder="#hex" value=""
+                                                         onchange="changeColorView(this, 1)"/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./src/picker.js"></script>
+    <script type="text/javascript">
+        picker.init();
+    </script>
+
+    <div class="colorLabels" id="colorLabelsBlock">
+        <span>RGB</span> <input max="255" min="0" readonly class="cl-x3 colorLabelsImput" id="cl-rgb-r" type="text"
+                                placeholder="R"
+                                value="" onchange="changeColorView(this)"/><input max="255" min="0" readonly
+                                                                                  class="cl-x3 colorLabelsImput"
+                                                                                  id="cl-rgb-g" type="text"
+                                                                                  placeholder="G" value=""
+                                                                                  onchange="changeColorView(this)"/><input
+            max="255" min="0" readonly class="cl-x3 colorLabelsImput" id="cl-rgb-b" type="text" placeholder="B" value=""
+            onchange="changeColorView(this)"/>
+        <span>HSB</span> <input max="360" min="0" readonly class="cl-x3 colorLabelsImput" id="cl-hsv-h" type="text"
+                                placeholder="H"
+                                value="" onchange="changeColorView(this)"/><input max="100" min="0" readonly
+                                                                                  class="cl-x3 colorLabelsImput"
+                                                                                  id="cl-hsv-s" type="text"
+                                                                                  placeholder="S" value=""
+                                                                                  onchange="changeColorView(this)"/><input
+            max="100" min="0" readonly class="cl-x3 colorLabelsImput" id="cl-hsv-v" type="text" placeholder="B" value=""
+            onchange="changeColorView(this)"/>
+        <span>HEX</span> <input readonly class="cl-x1 colorLabelsImput" id="cl-hex" type="text" placeholder="#hex"
+                                value="" onchange="changeColorView(this, 1)"/>
+    </div>
+</section>
+
+<section id="sideR">
+    <div id="about">
+        <div class="a-title"> How to: </div>
+        <div class="a-text"> <strong> Strength </strong> is the parameter responsible for the strength of the color change in one direction or another. By default: in the center = equal to zero. </div>
+
+        <div class="a-text"> Step 1: </div>
+        <div class="a-text a-text-margin-left"> Select the <strong>hue</strong> by moving the <strong>triangle markers</strong> on the hue strip. </div>
+
+        <div class="a-text"> Step 2: </div>
+        <div class="a-text a-text-margin-left"> Select the <strong>strength</strong> by moving the <strong>circle</strong> inside Color Picker rectangle. </div>
+
+        <div class="a-text"> Step 3: </div>
+        <div class="a-text a-text-margin-left"> Select the <strong>base color</strong> by moving the <strong>slider</strong>. </div>
+
+        <div class="a-text"> Step 4: </div>
+        <div class="a-text a-text-margin-left"> While choosing a color in four additional blocks is calculated an <strong>optimal set of colors</strong> in <strong>real-time</strong>. </div>
+
+
+        <div class="a-title"> About: </div>
+        <div class="a-text a-about"><span class="text-white">Color</span><span class="text-red">S</span><span class="text-white">tore</span> is a <strong>non-profit</strong> project.</div>
+        <div class="a-text a-about small-margin-top small-text">2016 &#169; All rights reserved.</div>
+        <div class="a-text a-about small-margin-top small-text">Author: <a href="https://vk.com/id22698918" target="_blank">Vladyslav Oliinyk</a></div>
+    </div>
+</section>
+
+</body>
+</html>
